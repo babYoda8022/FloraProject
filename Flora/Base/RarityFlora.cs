@@ -6,7 +6,7 @@ namespace Flora.Base
     {
 
         private EnumRarityFlora _rarity = EnumRarityFlora.None;
-        internal EnumRarityFlora Rarity { get { return _rarity; } }
+        public EnumRarityFlora Rarity { get { return _rarity; } }
         internal void SetRarity(EnumRarityFlora rarity)
         {
             _rarity = rarity;
