@@ -1,7 +1,7 @@
 ﻿using Flower.Base;
 using Flower.Enumerator;
 
-namespace Flower.Floras
+namespace Flower.Flowers
 {
     public class FlyFlower : BaseFlower
     {
