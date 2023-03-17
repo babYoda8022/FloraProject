@@ -8,14 +8,14 @@ namespace Flora.Base
         internal int Life { get; set; }
 
         private int _maxLife = 0;
-        internal int MaxLife { get { return _maxLife; } }
+        public int MaxLife { get { return _maxLife; } }
 
         private bool _isAlive = false;
-        internal bool IsAlive { get { return _isAlive; } }
+        public bool IsAlive { get { return _isAlive; } }
 
         private EnumLifeCircleFlora _lifeCycle = EnumLifeCircleFlora.Child;
-        internal EnumLifeCircleFlora LifeCycle { get { return _lifeCycle; } }
-        internal void AddLife(int value)
+        public EnumLifeCircleFlora LifeCycle { get { return _lifeCycle; } }
+        public void AddLife(int value)
         {
             int difLifeMaxlife = MaxLife - Life;
 
@@ -24,7 +24,7 @@ namespace Flora.Base
             else
                 Life += difLifeMaxlife;
         }
-        internal void RemoveLife(int value)
+        public void RemoveLife(int value)
         {
             if (value >= Life)
             {
@@ -33,15 +33,15 @@ namespace Flora.Base
             }
             Life -= value;
         }
-        internal void SetLifeCycle(EnumLifeCircleFlora lifeCircle)
+        public void SetLifeCycle(EnumLifeCircleFlora lifeCircle)
         {
             _lifeCycle = lifeCircle;
         }
-        internal void SetIsAlive(bool isAlive)
+        public void SetIsAlive(bool isAlive)
         {
             _isAlive = isAlive;
         }
-        internal void SetMaxLife(int maxLife)
+        public void SetMaxLife(int maxLife)
         {
             _maxLife = maxLife;
         }

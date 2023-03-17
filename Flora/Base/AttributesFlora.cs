@@ -4,35 +4,35 @@ namespace Flora.Base
     public partial class BaseFlora
     {
         private int _swimLevel = 0;
-        internal int SwimLevel { get { return _swimLevel; } }
+        public int SwimLevel { get { return _swimLevel; } }
 
         private int _flyLevel = 0;
-        internal int FlyLevel { get { return _flyLevel; } }
+        public int FlyLevel { get { return _flyLevel; } }
 
         private int _runLevel = 0;
-        internal int RunLevel { get { return _runLevel; } }
+        public int RunLevel { get { return _runLevel; } }
 
         private int _powerLevel = 0;
-        internal int PowerLevel { get { return _powerLevel; } }
+        public int PowerLevel { get { return _powerLevel; } }
 
         private int _staminaLevel = 0;
-        internal int StaminaLevel { get { return _staminaLevel; } }
+        public int StaminaLevel { get { return _staminaLevel; } }
 
         private int _swimPoints = 0;
-        internal int SwimPoints { get { return _swimPoints; } }
+        public int SwimPoints { get { return _swimPoints; } }
 
         private int _flyPoints = 0;
-        internal int FlyPoints { get { return _flyPoints; } }
+        public int FlyPoints { get { return _flyPoints; } }
 
         private int _runPoints = 0;
-        internal int RunPoints { get { return _runPoints; } }
+        public int RunPoints { get { return _runPoints; } }
 
         private int _powerPoints = 0;
-        internal int PowerPoints { get { return _powerPoints; } }
+        public int PowerPoints { get { return _powerPoints; } }
 
         private int _staminaPoints = 0;
-        internal int StaminaPoints { get { return _staminaPoints; } }
-        internal void SetSwinPoints(int valuePoints)
+        public int StaminaPoints { get { return _staminaPoints; } }
+        public void SetSwinPoints(int valuePoints)
         {
             _swimPoints += valuePoints;
 
@@ -43,7 +43,7 @@ namespace Flora.Base
                 _swimPoints = restPoint;
             }
         }
-        internal void SetFlyPoints(int valuePoints)
+        public void SetFlyPoints(int valuePoints)
         {
             _flyPoints += valuePoints;
 
@@ -54,7 +54,7 @@ namespace Flora.Base
                 _flyPoints = restPoint;
             }
         }
-        internal void SetRunPoints(int valuePoints)
+        public void SetRunPoints(int valuePoints)
         {
             _runPoints += valuePoints;
 
@@ -65,7 +65,7 @@ namespace Flora.Base
                 _runPoints = restPoint;
             }
         }
-        internal void SetPowerPoints(int valuePoints)
+        public void SetPowerPoints(int valuePoints)
         {
             _powerPoints += valuePoints;
             
@@ -76,7 +76,7 @@ namespace Flora.Base
                 _powerPoints = restPoint;
             }
         }
-        internal void SetStaminaPoints(int valuePoints)
+        public void SetStaminaPoints(int valuePoints)
         {
             _staminaPoints += valuePoints;
 

@@ -5,7 +5,7 @@ namespace Flora.Base
     public partial class BaseFlora
     {
         internal EnumColorFlora _color = EnumColorFlora.Blue;
-        internal EnumColorFlora Color { get { return _color; } }
+        public EnumColorFlora Color { get { return _color; } }
 
         internal void SetRandomColor()
         {
