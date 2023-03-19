@@ -4,10 +4,10 @@ namespace Flora.Base
 {
     public partial class BaseFlora
     {
-        internal EnumColorFlora _color = EnumColorFlora.Blue;
+        private EnumColorFlora _color = EnumColorFlora.Blue;
         public EnumColorFlora Color { get { return _color; } }
 
-        internal void SetRandomColor()
+        protected void SetRandomColor()
         {
             int randomColor = new Random().Next(0, 4);
             _color = (EnumColorFlora)randomColor;
