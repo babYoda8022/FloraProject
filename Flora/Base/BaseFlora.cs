@@ -4,10 +4,11 @@ namespace Flora.Base
 {
     public partial class BaseFlora
     {
-        internal string? Name { get; set; }
-        internal int Life { get; set; }
+        public string Name { get; set; }
+        protected int _life = 0;
+        public int Life { get { return _life; } }
 
-        private int _maxLife = 0;
+        protected int _maxLife = 0;
         public int MaxLife { get { return _maxLife; } }
 
         private bool _isAlive = false;
@@ -17,21 +18,21 @@ namespace Flora.Base
         public EnumLifeCircleFlora LifeCycle { get { return _lifeCycle; } }
         public void AddLife(int value)
         {
-            int difLifeMaxlife = MaxLife - Life;
+            int difLifeMaxlife = MaxLife - _life;
 
             if (value <= difLifeMaxlife)
-                Life += value;
+                _life += value;
             else
-                Life += difLifeMaxlife;
+                _life += difLifeMaxlife;
         }
         public void RemoveLife(int value)
         {
-            if (value >= Life)
+            if (value >= _life)
             {
-                Life -= value;
+                _life -= value;
                 SetIsAlive(false);
             }
-            Life -= value;
+            _life -= value;
         }
         public void SetLifeCycle(EnumLifeCircleFlora lifeCircle)
         {
@@ -40,10 +41,6 @@ namespace Flora.Base
         public void SetIsAlive(bool isAlive)
         {
             _isAlive = isAlive;
-        }
-        public void SetMaxLife(int maxLife)
-        {
-            _maxLife = maxLife;
         }
     }
 }

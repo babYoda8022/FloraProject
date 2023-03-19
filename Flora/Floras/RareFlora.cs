@@ -9,12 +9,12 @@ namespace Flora.Floras
         {
             Name = name;
             SetIsAlive(true);
-            Life = life;
-            SetMaxLife(life);
+            _life = life;
+            _maxLife = life;
             SetRandomPersonality();
             SetRandomMood();
             SetRandomColor();
-            SetRarity(EnumRarityFlora.SuperRare);
+            _rarity = EnumRarityFlora.SuperRare;
         }
     }
 }
