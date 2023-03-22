@@ -85,7 +85,8 @@ namespace Flora.Base
                 _staminaLevel++;
                 int restPoint = Int16.Parse(Convert.ToString(valuePoints / 10));
                 _staminaPoints = restPoint;
-                double newMaxLife = _maxLife * 0.5;
+                double newMaxLife = _maxLife * 1.4;
+                _life = (int)newMaxLife;
                 _maxLife = (int)newMaxLife; 
             }
         }
