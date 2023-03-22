@@ -29,10 +29,13 @@ namespace Flora.Base
         {
             if (value >= _life)
             {
-                _life -= value;
+                _life = 0;
                 SetIsAlive(false);
             }
-            _life -= value;
+            else
+            {
+                _life -= value;
+            }
         }
         public void SetLifeCycle(EnumLifeCircleFlora lifeCircle)
         {
